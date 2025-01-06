@@ -18,14 +18,19 @@ jobs:
       - name: Install Hugging Face CLI
         run: pip install huggingface-hub
 
-      # Authenticate with Hugging Face
+      # Authenticate with Hugging Face using token
       - name: Authenticate with Hugging Face
         run: huggingface-cli login --token ${{ secrets.HF_TOKEN }}
+
+      # Configure Git for Hugging Face
+      - name: Configure Git
+        run: |
+          git config --global user.email "sheraz601050@gmail.com"
+          git config --global user.name "Muhammad-Sheraz-ds"
 
       # Push changes to Hugging Face Space
       - name: Deploy to Hugging Face Space
         run: |
-          git config --global user.email "sheraz601050@gmail.com"
-          git config --global user.name "Muhammad-Sheraz-ds"
-          git push https://huggingface.co/spaces/MuhammadSheraza002/loan-status-prediction main
+          git remote add huggingface https://huggingface.co/spaces/MuhammadSheraza002/loan-status-prediction
+          git push huggingface main
 
