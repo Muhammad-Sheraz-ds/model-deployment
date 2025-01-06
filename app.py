@@ -3,7 +3,7 @@ import pandas as pd
 
 # Load the trained model
 
-
+#app
 st.title("Prediction App")
 
 # User inputs
