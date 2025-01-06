@@ -6,7 +6,7 @@ import pandas as pd
 with open('dummy_model.pkl', 'rb') as model_file:
     model = pickle.load(model_file)
 
-st.title("Dummy Model Prediction App")
+st.title("Prediction App")
 
 # User inputs
 feature1 = st.number_input("Enter Feature1:")
