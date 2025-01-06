@@ -31,6 +31,6 @@ jobs:
       # Add Hugging Face remote and push changes
       - name: Deploy to Hugging Face Space
         run: |
-          git remote add huggingface https://huggingface.co/spaces/MuhammadSheraza002/loan-status-prediction
+          git remote add huggingface https://huggingface.co/spaces/MuhammadSheraza002
           git push huggingface main
 
