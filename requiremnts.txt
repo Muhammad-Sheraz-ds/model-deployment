@@ -1,3 +1,4 @@
-streamlit
+streamlit==1.41.1
 scikit-learn
-pandas
+pickle5  # If you use pickle features explicitly
+
