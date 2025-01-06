@@ -2,3 +2,4 @@ streamlit==1.41.1
 scikit-learn
 pickle5  # If you use pickle features explicitly
 
+pandas
