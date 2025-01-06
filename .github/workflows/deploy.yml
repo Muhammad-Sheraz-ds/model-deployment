@@ -18,7 +18,7 @@ jobs:
       - name: Install Hugging Face CLI
         run: pip install huggingface-hub
 
-      # Authenticate with Hugging Face using token
+      # Authenticate with Hugging Face using the stored token
       - name: Authenticate with Hugging Face
         run: huggingface-cli login --token ${{ secrets.HF_TOKEN }}
 
